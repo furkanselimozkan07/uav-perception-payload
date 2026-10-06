@@ -1,0 +1,2042 @@
+{
+ "summary": {
+  "runs": 20,
+  "deliveries_attempted": 40,
+  "deliveries_released": 40,
+  "correct_target_rate": 1.0,
+  "within_50ft_rate": 1.0,
+  "impact_miss_m": {
+   "median": 1.83,
+   "p90": 2.96,
+   "max": 4.14
+  },
+  "fused_target_error_m": {
+   "median": 0.6,
+   "p90": 1.09
+  },
+  "single_fix_error_median_m": 0.9,
+  "mission_time_s_median": 222.5
+ },
+ "runs": [
+  {
+   "seed": 1,
+   "sim_time_s": 227.3,
+   "wall_s": 37.5,
+   "wind_true_ne": [
+    0.96,
+    -3.48
+   ],
+   "wind_est_ne": [
+    0.33,
+    -4.63
+   ],
+   "att_bias_deg": [
+    -1.1,
+    -0.46,
+    -0.71
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 1.03,
+    "tent": 1.16
+   },
+   "n_fixes": {
+    "mannequin": 41,
+    "tent": 44
+   },
+   "mosaic_frames": 106,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.37,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 182.9,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 1.06,
+     "track_hits": 5,
+     "track_sigma_m": 0.88,
+     "impact_miss_m": 3.09,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 152.7,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.41,
+     "track_hits": 5,
+     "track_sigma_m": 0.92,
+     "impact_miss_m": 2.78,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     145.4,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     152.7,
+     "RELEASE",
+     "released beacon at 39.810658,30.531012 alt 29.6 m"
+    ],
+    [
+     152.8,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     175.6,
+     "APPROACH",
+     "water_bottle -> mannequin #3 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     182.9,
+     "RELEASE",
+     "released water_bottle at 39.810274,30.531285 alt 30.4 m"
+    ],
+    [
+     183.0,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     183.0,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 2,
+   "sim_time_s": 222.1,
+   "wall_s": 33.7,
+   "wind_true_ne": [
+    3.11,
+    -1.43
+   ],
+   "wind_est_ne": [
+    2.63,
+    -0.45
+   ],
+   "att_bias_deg": [
+    0.88,
+    -0.02,
+    -2.29
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 1.05,
+    "tent": 0.88
+   },
+   "n_fixes": {
+    "mannequin": 46,
+    "tent": 28
+   },
+   "mosaic_frames": 100,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.68,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 111.5,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 1.09,
+     "track_hits": 5,
+     "track_sigma_m": 0.79,
+     "impact_miss_m": 1.88,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 18.9
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 198.8,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.93,
+     "track_hits": 5,
+     "track_sigma_m": 0.78,
+     "impact_miss_m": 1.87,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     105.1,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     111.5,
+     "RELEASE",
+     "released water_bottle at 39.810477,30.530168 alt 29.5 m"
+    ],
+    [
+     111.5,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     192.6,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     198.8,
+     "RELEASE",
+     "released beacon at 39.810745,30.531324 alt 29.5 m"
+    ],
+    [
+     198.8,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     198.9,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 3,
+   "sim_time_s": 217.5,
+   "wall_s": 32.7,
+   "wind_true_ne": [
+    2.2,
+    2.72
+   ],
+   "wind_est_ne": [
+    1.77,
+    3.98
+   ],
+   "att_bias_deg": [
+    -0.18,
+    0.2,
+    -1.55
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.85,
+    "tent": 0.96
+   },
+   "n_fixes": {
+    "mannequin": 28,
+    "tent": 45
+   },
+   "mosaic_frames": 99,
+   "mosaic_coverage": 0.997,
+   "mosaic_median_correction_m": 1.62,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 154.4,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 1.11,
+     "track_hits": 5,
+     "track_sigma_m": 1.27,
+     "impact_miss_m": 1.9,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 145.5,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.31,
+     "track_hits": 5,
+     "track_sigma_m": 0.94,
+     "impact_miss_m": 2.37,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     138.6,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     145.5,
+     "RELEASE",
+     "released beacon at 39.810168,30.530874 alt 30.8 m"
+    ],
+    [
+     145.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     145.6,
+     "APPROACH",
+     "water_bottle -> mannequin #2 (5 fixes, 1\u03c3 1.3 m)"
+    ],
+    [
+     154.4,
+     "RELEASE",
+     "released water_bottle at 39.810581,30.530706 alt 30.4 m"
+    ],
+    [
+     154.5,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     154.5,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 4,
+   "sim_time_s": 225.2,
+   "wall_s": 33.7,
+   "wind_true_ne": [
+    -0.77,
+    1.4
+   ],
+   "wind_est_ne": [
+    -0.24,
+    1.72
+   ],
+   "att_bias_deg": [
+    -0.25,
+    -0.07,
+    0.81
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.83,
+    "tent": 0.93
+   },
+   "n_fixes": {
+    "mannequin": 45,
+    "tent": 58
+   },
+   "mosaic_frames": 106,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.41,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 163.5,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.49,
+     "track_hits": 5,
+     "track_sigma_m": 0.87,
+     "impact_miss_m": 3.47,
+     "within_50ft": true,
+     "fall_time_s": 2.7,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 115.4,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.57,
+     "track_hits": 5,
+     "track_sigma_m": 0.84,
+     "impact_miss_m": 2.69,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.2
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     108.4,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     115.4,
+     "RELEASE",
+     "released beacon at 39.810719,30.530262 alt 30.6 m"
+    ],
+    [
+     115.5,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     156.4,
+     "APPROACH",
+     "water_bottle -> mannequin #3 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     163.5,
+     "RELEASE",
+     "released water_bottle at 39.810815,30.530902 alt 30.1 m"
+    ],
+    [
+     163.5,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     163.6,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 5,
+   "sim_time_s": 220.3,
+   "wall_s": 32.8,
+   "wind_true_ne": [
+    -1.66,
+    -2.07
+   ],
+   "wind_est_ne": [
+    -1.25,
+    -1.96
+   ],
+   "att_bias_deg": [
+    1.07,
+    -0.9,
+    -0.43
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.84,
+    "tent": 1.27
+   },
+   "n_fixes": {
+    "mannequin": 56,
+    "tent": 38
+   },
+   "mosaic_frames": 99,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.31,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 132.9,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 1.05,
+     "track_hits": 5,
+     "track_sigma_m": 0.79,
+     "impact_miss_m": 2.34,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 198.3,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.08,
+     "track_hits": 5,
+     "track_sigma_m": 0.83,
+     "impact_miss_m": 1.09,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     126.1,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     132.9,
+     "RELEASE",
+     "released water_bottle at 39.810377,30.530537 alt 29.8 m"
+    ],
+    [
+     132.9,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     193.6,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     198.3,
+     "RELEASE",
+     "released beacon at 39.810843,30.531358 alt 29.9 m"
+    ],
+    [
+     198.3,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     198.4,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 6,
+   "sim_time_s": 223.6,
+   "wall_s": 33.6,
+   "wind_true_ne": [
+    2.23,
+    -0.26
+   ],
+   "wind_est_ne": [
+    2.53,
+    -1.0
+   ],
+   "att_bias_deg": [
+    0.58,
+    0.63,
+    0.28
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.74,
+    "tent": 0.89
+   },
+   "n_fixes": {
+    "mannequin": 34,
+    "tent": 34
+   },
+   "mosaic_frames": 102,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.18,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 185.6,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.55,
+     "track_hits": 5,
+     "track_sigma_m": 0.9,
+     "impact_miss_m": 2.62,
+     "within_50ft": true,
+     "fall_time_s": 2.7,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 147.5,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.57,
+     "track_hits": 5,
+     "track_sigma_m": 0.79,
+     "impact_miss_m": 0.9,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.2
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     141.4,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     147.5,
+     "RELEASE",
+     "released beacon at 39.810369,30.530776 alt 30.5 m"
+    ],
+    [
+     147.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     181.1,
+     "APPROACH",
+     "water_bottle -> mannequin #3 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     185.6,
+     "RELEASE",
+     "released water_bottle at 39.810202,30.531377 alt 30.3 m"
+    ],
+    [
+     185.7,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     185.7,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 7,
+   "sim_time_s": 222.6,
+   "wall_s": 32.8,
+   "wind_true_ne": [
+    -3.7,
+    2.92
+   ],
+   "wind_est_ne": [
+    -3.48,
+    3.92
+   ],
+   "att_bias_deg": [
+    1.08,
+    -0.67,
+    0.86
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 1.24,
+    "tent": 1.24
+   },
+   "n_fixes": {
+    "mannequin": 47,
+    "tent": 48
+   },
+   "mosaic_frames": 102,
+   "mosaic_coverage": 0.996,
+   "mosaic_median_correction_m": 1.51,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 146.2,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 1.05,
+     "track_hits": 7,
+     "track_sigma_m": 0.75,
+     "impact_miss_m": 0.87,
+     "within_50ft": true,
+     "fall_time_s": 2.72,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 141.6,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.81,
+     "track_hits": 5,
+     "track_sigma_m": 0.95,
+     "impact_miss_m": 1.58,
+     "within_50ft": true,
+     "fall_time_s": 2.83,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     135.6,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     141.6,
+     "RELEASE",
+     "released beacon at 39.810281,30.530687 alt 29.9 m"
+    ],
+    [
+     141.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     141.7,
+     "APPROACH",
+     "water_bottle -> mannequin #2 (7 fixes, 1\u03c3 0.7 m)"
+    ],
+    [
+     146.2,
+     "RELEASE",
+     "released water_bottle at 39.810228,30.530859 alt 30.4 m"
+    ],
+    [
+     146.3,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     146.3,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 8,
+   "sim_time_s": 218.6,
+   "wall_s": 32.2,
+   "wind_true_ne": [
+    -0.93,
+    -2.75
+   ],
+   "wind_est_ne": [
+    -0.38,
+    -2.95
+   ],
+   "att_bias_deg": [
+    -0.22,
+    1.51,
+    1.26
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.9,
+    "tent": 1.15
+   },
+   "n_fixes": {
+    "mannequin": 40,
+    "tent": 34
+   },
+   "mosaic_frames": 103,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.19,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 184.8,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.6,
+     "track_hits": 5,
+     "track_sigma_m": 0.89,
+     "impact_miss_m": 2.9,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 191.6,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 1.14,
+     "track_hits": 12,
+     "track_sigma_m": 0.55,
+     "impact_miss_m": 1.08,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     177.6,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     184.8,
+     "RELEASE",
+     "released water_bottle at 39.810234,30.531579 alt 29.7 m"
+    ],
+    [
+     184.9,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     184.9,
+     "APPROACH",
+     "beacon -> tent #2 (12 fixes, 1\u03c3 0.6 m)"
+    ],
+    [
+     191.6,
+     "RELEASE",
+     "released beacon at 39.810463,30.531366 alt 29.8 m"
+    ],
+    [
+     191.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     191.7,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 9,
+   "sim_time_s": 219.8,
+   "wall_s": 32.9,
+   "wind_true_ne": [
+    -1.1,
+    -3.78
+   ],
+   "wind_est_ne": [
+    -0.23,
+    -5.46
+   ],
+   "att_bias_deg": [
+    0.09,
+    0.11,
+    0.33
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.81,
+    "tent": 0.92
+   },
+   "n_fixes": {
+    "mannequin": 47,
+    "tent": 47
+   },
+   "mosaic_frames": 101,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.39,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 171.7,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.17,
+     "track_hits": 13,
+     "track_sigma_m": 0.51,
+     "impact_miss_m": 2.1,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 166.2,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.44,
+     "track_hits": 5,
+     "track_sigma_m": 0.87,
+     "impact_miss_m": 2.44,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     158.4,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     166.2,
+     "RELEASE",
+     "released beacon at 39.810822,30.531340 alt 30.4 m"
+    ],
+    [
+     166.3,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     166.3,
+     "APPROACH",
+     "water_bottle -> mannequin #2 (13 fixes, 1\u03c3 0.5 m)"
+    ],
+    [
+     171.7,
+     "RELEASE",
+     "released water_bottle at 39.810628,30.531283 alt 30.1 m"
+    ],
+    [
+     171.7,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     171.8,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 10,
+   "sim_time_s": 216.5,
+   "wall_s": 32.5,
+   "wind_true_ne": [
+    -3.73,
+    -1.1
+   ],
+   "wind_est_ne": [
+    -3.61,
+    -1.33
+   ],
+   "att_bias_deg": [
+    -0.28,
+    -0.45,
+    1.2
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.89,
+    "tent": 0.84
+   },
+   "n_fixes": {
+    "mannequin": 36,
+    "tent": 65
+   },
+   "mosaic_frames": 100,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.34,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 169.1,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.34,
+     "track_hits": 16,
+     "track_sigma_m": 0.45,
+     "impact_miss_m": 1.47,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 165.1,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.57,
+     "track_hits": 5,
+     "track_sigma_m": 1.03,
+     "impact_miss_m": 1.93,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.4
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     158.1,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 1.0 m)"
+    ],
+    [
+     165.1,
+     "RELEASE",
+     "released beacon at 39.810721,30.531174 alt 29.7 m"
+    ],
+    [
+     165.1,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     165.2,
+     "APPROACH",
+     "water_bottle -> mannequin #2 (16 fixes, 1\u03c3 0.4 m)"
+    ],
+    [
+     169.1,
+     "RELEASE",
+     "released water_bottle at 39.810615,30.531081 alt 30.2 m"
+    ],
+    [
+     169.1,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     169.2,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 11,
+   "sim_time_s": 225.3,
+   "wall_s": 33.9,
+   "wind_true_ne": [
+    3.66,
+    1.88
+   ],
+   "wind_est_ne": [
+    3.58,
+    2.75
+   ],
+   "att_bias_deg": [
+    0.29,
+    -0.14,
+    0.75
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.84,
+    "tent": 1.08
+   },
+   "n_fixes": {
+    "mannequin": 41,
+    "tent": 41
+   },
+   "mosaic_frames": 106,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.48,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 149.7,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.76,
+     "track_hits": 5,
+     "track_sigma_m": 0.9,
+     "impact_miss_m": 2.73,
+     "within_50ft": true,
+     "fall_time_s": 2.72,
+     "impact_speed_mps": 18.9
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 194.5,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.99,
+     "track_hits": 5,
+     "track_sigma_m": 0.87,
+     "impact_miss_m": 3.13,
+     "within_50ft": true,
+     "fall_time_s": 2.83,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     142.4,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     149.7,
+     "RELEASE",
+     "released water_bottle at 39.810413,30.530959 alt 29.6 m"
+    ],
+    [
+     149.7,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     187.4,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     194.5,
+     "RELEASE",
+     "released beacon at 39.810244,30.531539 alt 30.0 m"
+    ],
+    [
+     194.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     194.6,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 12,
+   "sim_time_s": 221.2,
+   "wall_s": 33.3,
+   "wind_true_ne": [
+    -1.01,
+    -2.49
+   ],
+   "wind_est_ne": [
+    -1.19,
+    -2.41
+   ],
+   "att_bias_deg": [
+    -0.83,
+    0.2,
+    0.6
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.87,
+    "tent": 0.95
+   },
+   "n_fixes": {
+    "mannequin": 28,
+    "tent": 56
+   },
+   "mosaic_frames": 100,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.41,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 165.1,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.81,
+     "track_hits": 5,
+     "track_sigma_m": 0.78,
+     "impact_miss_m": 1.83,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 191.7,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 1.02,
+     "track_hits": 5,
+     "track_sigma_m": 0.79,
+     "impact_miss_m": 1.59,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     159.4,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     165.1,
+     "RELEASE",
+     "released water_bottle at 39.810688,30.531049 alt 29.5 m"
+    ],
+    [
+     165.2,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     185.4,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     191.7,
+     "RELEASE",
+     "released beacon at 39.810317,30.531431 alt 30.3 m"
+    ],
+    [
+     191.8,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     191.8,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 13,
+   "sim_time_s": 225.5,
+   "wall_s": 33.9,
+   "wind_true_ne": [
+    2.05,
+    -1.52
+   ],
+   "wind_est_ne": [
+    3.37,
+    -1.59
+   ],
+   "att_bias_deg": [
+    0.04,
+    -0.11,
+    -0.42
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.77,
+    "tent": 0.81
+   },
+   "n_fixes": {
+    "mannequin": 45,
+    "tent": 58
+   },
+   "mosaic_frames": 104,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.12,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 128.3,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.24,
+     "track_hits": 5,
+     "track_sigma_m": 0.9,
+     "impact_miss_m": 1.01,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 181.7,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.55,
+     "track_hits": 5,
+     "track_sigma_m": 0.81,
+     "impact_miss_m": 1.63,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     120.4,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     128.3,
+     "RELEASE",
+     "released water_bottle at 39.810841,30.530713 alt 29.9 m"
+    ],
+    [
+     128.3,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     174.9,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     181.7,
+     "RELEASE",
+     "released beacon at 39.810322,30.531148 alt 30.1 m"
+    ],
+    [
+     181.7,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     181.8,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 14,
+   "sim_time_s": 223.8,
+   "wall_s": 32.6,
+   "wind_true_ne": [
+    -3.89,
+    -2.49
+   ],
+   "wind_est_ne": [
+    -3.61,
+    -2.12
+   ],
+   "att_bias_deg": [
+    1.25,
+    0.1,
+    1.25
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.91,
+    "tent": 0.98
+   },
+   "n_fixes": {
+    "mannequin": 36,
+    "tent": 34
+   },
+   "mosaic_frames": 103,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.44,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 185.8,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.73,
+     "track_hits": 5,
+     "track_sigma_m": 0.88,
+     "impact_miss_m": 2.04,
+     "within_50ft": true,
+     "fall_time_s": 2.72,
+     "impact_speed_mps": 18.9
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 131.6,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.95,
+     "track_hits": 5,
+     "track_sigma_m": 0.78,
+     "impact_miss_m": 1.05,
+     "within_50ft": true,
+     "fall_time_s": 2.83,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     125.4,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     131.6,
+     "RELEASE",
+     "released beacon at 39.810421,30.530461 alt 29.9 m"
+    ],
+    [
+     131.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     181.4,
+     "APPROACH",
+     "water_bottle -> mannequin #3 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     185.8,
+     "RELEASE",
+     "released water_bottle at 39.810198,30.531431 alt 30.0 m"
+    ],
+    [
+     185.9,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     185.9,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 15,
+   "sim_time_s": 224.7,
+   "wall_s": 33.9,
+   "wind_true_ne": [
+    -1.17,
+    -0.81
+   ],
+   "wind_est_ne": [
+    -0.06,
+    -1.33
+   ],
+   "att_bias_deg": [
+    0.48,
+    -0.11,
+    0.65
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.67,
+    "tent": 0.87
+   },
+   "n_fixes": {
+    "mannequin": 47,
+    "tent": 46
+   },
+   "mosaic_frames": 104,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.34,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 133.5,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.39,
+     "track_hits": 5,
+     "track_sigma_m": 0.79,
+     "impact_miss_m": 1.46,
+     "within_50ft": true,
+     "fall_time_s": 2.7,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 154.5,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.74,
+     "track_hits": 5,
+     "track_sigma_m": 0.91,
+     "impact_miss_m": 2.94,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     127.1,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     133.5,
+     "RELEASE",
+     "released water_bottle at 39.810280,30.530513 alt 29.2 m"
+    ],
+    [
+     133.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     146.9,
+     "APPROACH",
+     "beacon -> tent #2 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     154.5,
+     "RELEASE",
+     "released beacon at 39.810145,30.530969 alt 30.2 m"
+    ],
+    [
+     154.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     154.6,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 16,
+   "sim_time_s": 224.2,
+   "wall_s": 33.4,
+   "wind_true_ne": [
+    1.25,
+    -3.14
+   ],
+   "wind_est_ne": [
+    1.12,
+    -2.95
+   ],
+   "att_bias_deg": [
+    -0.15,
+    -0.35,
+    0.54
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.73,
+    "tent": 0.79
+   },
+   "n_fixes": {
+    "mannequin": 28,
+    "tent": 50
+   },
+   "mosaic_frames": 102,
+   "mosaic_coverage": 0.999,
+   "mosaic_median_correction_m": 1.23,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 179.3,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.09,
+     "track_hits": 5,
+     "track_sigma_m": 0.78,
+     "impact_miss_m": 1.24,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 112.5,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 1.53,
+     "track_hits": 5,
+     "track_sigma_m": 0.89,
+     "impact_miss_m": 0.34,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     103.9,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     112.5,
+     "RELEASE",
+     "released beacon at 39.810391,30.530359 alt 30.5 m"
+    ],
+    [
+     112.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     173.4,
+     "APPROACH",
+     "water_bottle -> mannequin #3 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     179.3,
+     "RELEASE",
+     "released water_bottle at 39.810421,30.531071 alt 29.6 m"
+    ],
+    [
+     179.3,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     179.4,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 17,
+   "sim_time_s": 223.8,
+   "wall_s": 33.8,
+   "wind_true_ne": [
+    -1.74,
+    -1.6
+   ],
+   "wind_est_ne": [
+    -0.99,
+    -2.85
+   ],
+   "att_bias_deg": [
+    0.18,
+    0.14,
+    -0.53
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 1.0,
+    "tent": 0.85
+   },
+   "n_fixes": {
+    "mannequin": 27,
+    "tent": 55
+   },
+   "mosaic_frames": 101,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.1,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 132.3,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.22,
+     "track_hits": 5,
+     "track_sigma_m": 0.78,
+     "impact_miss_m": 0.9,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 18.9
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 177.6,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.47,
+     "track_hits": 5,
+     "track_sigma_m": 0.86,
+     "impact_miss_m": 1.83,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     126.6,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     132.3,
+     "RELEASE",
+     "released water_bottle at 39.810318,30.530416 alt 29.8 m"
+    ],
+    [
+     132.3,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     168.9,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     177.6,
+     "RELEASE",
+     "released beacon at 39.810481,30.531250 alt 29.8 m"
+    ],
+    [
+     177.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     177.7,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 18,
+   "sim_time_s": 222.4,
+   "wall_s": 34.2,
+   "wind_true_ne": [
+    -3.3,
+    0.12
+   ],
+   "wind_est_ne": [
+    -5.3,
+    -0.5
+   ],
+   "att_bias_deg": [
+    -0.55,
+    -0.6,
+    1.01
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.83,
+    "tent": 0.88
+   },
+   "n_fixes": {
+    "mannequin": 43,
+    "tent": 44
+   },
+   "mosaic_frames": 106,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.51,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 133.7,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.61,
+     "track_hits": 9,
+     "track_sigma_m": 0.61,
+     "impact_miss_m": 1.84,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 18.9
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 129.5,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 1.72,
+     "track_hits": 5,
+     "track_sigma_m": 0.92,
+     "impact_miss_m": 4.14,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     122.1,
+     "APPROACH",
+     "beacon -> tent #1 (5 fixes, 1\u03c3 0.9 m)"
+    ],
+    [
+     129.5,
+     "RELEASE",
+     "released beacon at 39.810675,30.530682 alt 29.9 m"
+    ],
+    [
+     129.6,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     129.6,
+     "APPROACH",
+     "water_bottle -> mannequin #2 (9 fixes, 1\u03c3 0.6 m)"
+    ],
+    [
+     133.7,
+     "RELEASE",
+     "released water_bottle at 39.810772,30.530786 alt 30.2 m"
+    ],
+    [
+     133.8,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     133.8,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 19,
+   "sim_time_s": 221.8,
+   "wall_s": 33.6,
+   "wind_true_ne": [
+    0.92,
+    3.33
+   ],
+   "wind_est_ne": [
+    1.72,
+    2.32
+   ],
+   "att_bias_deg": [
+    1.15,
+    1.37,
+    0.1
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 1.07,
+    "tent": 1.23
+   },
+   "n_fixes": {
+    "mannequin": 44,
+    "tent": 34
+   },
+   "mosaic_frames": 102,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.5,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 116.8,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.68,
+     "track_hits": 5,
+     "track_sigma_m": 0.85,
+     "impact_miss_m": 1.19,
+     "within_50ft": true,
+     "fall_time_s": 2.71,
+     "impact_speed_mps": 18.9
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 180.9,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.23,
+     "track_hits": 5,
+     "track_sigma_m": 0.8,
+     "impact_miss_m": 1.35,
+     "within_50ft": true,
+     "fall_time_s": 2.82,
+     "impact_speed_mps": 17.3
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     109.6,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     116.8,
+     "RELEASE",
+     "released water_bottle at 39.810809,30.530263 alt 29.6 m"
+    ],
+    [
+     116.8,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     175.6,
+     "APPROACH",
+     "beacon -> tent #3 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     180.9,
+     "RELEASE",
+     "released beacon at 39.810152,30.531000 alt 29.4 m"
+    ],
+    [
+     181.0,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     181.0,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  },
+  {
+   "seed": 20,
+   "sim_time_s": 215.8,
+   "wall_s": 33.6,
+   "wind_true_ne": [
+    -1.92,
+    -0.59
+   ],
+   "wind_est_ne": [
+    -2.22,
+    -0.35
+   ],
+   "att_bias_deg": [
+    1.4,
+    -0.17,
+    -0.56
+   ],
+   "single_fix_err_median_m": {
+    "mannequin": 0.91,
+    "tent": 1.0
+   },
+   "n_fixes": {
+    "mannequin": 32,
+    "tent": 36
+   },
+   "mosaic_frames": 96,
+   "mosaic_coverage": 1.0,
+   "mosaic_median_correction_m": 1.59,
+   "deliveries": [
+    {
+     "payload": "water_bottle",
+     "released": true,
+     "t_release_s": 187.3,
+     "target_cls": "mannequin",
+     "correct_target": true,
+     "target_estimate_err_m": 0.46,
+     "track_hits": 5,
+     "track_sigma_m": 0.77,
+     "impact_miss_m": 1.14,
+     "within_50ft": true,
+     "fall_time_s": 2.7,
+     "impact_speed_mps": 19.0
+    },
+    {
+     "payload": "beacon",
+     "released": true,
+     "t_release_s": 191.1,
+     "target_cls": "tent",
+     "correct_target": true,
+     "target_estimate_err_m": 0.6,
+     "track_hits": 18,
+     "track_sigma_m": 0.41,
+     "impact_miss_m": 1.36,
+     "within_50ft": true,
+     "fall_time_s": 2.81,
+     "impact_speed_mps": 17.2
+    }
+   ],
+   "events": [
+    [
+     91.3,
+     "SEARCH",
+     "1 waypoint lap(s) complete"
+    ],
+    [
+     181.6,
+     "APPROACH",
+     "water_bottle -> mannequin #1 (5 fixes, 1\u03c3 0.8 m)"
+    ],
+    [
+     187.3,
+     "RELEASE",
+     "released water_bottle at 39.810547,30.531348 alt 29.9 m"
+    ],
+    [
+     187.4,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     187.4,
+     "APPROACH",
+     "beacon -> tent #2 (18 fixes, 1\u03c3 0.4 m)"
+    ],
+    [
+     191.1,
+     "RELEASE",
+     "released beacon at 39.810634,30.531334 alt 30.0 m"
+    ],
+    [
+     191.2,
+     "SEARCH",
+     "back to search pattern"
+    ],
+    [
+     191.2,
+     "DONE",
+     "all payloads delivered"
+    ]
+   ]
+  }
+ ]
+}
