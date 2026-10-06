@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uavpp"
+version = "0.1.0"
+description = "Onboard perception and payload delivery for small UAVs: detection, geolocation, tracking, release planning, mapping"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Furkan Selim Özkan" }]
+dependencies = ["numpy>=1.24", "opencv-python>=4.8", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+onboard = ["pymavlink>=2.4.40", "ultralytics>=8.3"]
+dev = ["pytest>=7", "matplotlib>=3.7"]
+
+[tool.setuptools]
+packages = ["uavpp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
