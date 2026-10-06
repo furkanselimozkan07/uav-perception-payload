@@ -1,0 +1,69 @@
+# Search - Detect - Deliver configuration (SUAS 2026 "Storm Response").
+# Units: metres, seconds, degrees, kilograms.
+
+camera:
+  # Replace with a real calibration (fx, fy, cx, cy, dist) for flight.
+  # A ChArUco calibration of the actual camera is what makes geolocation accurate.
+  width: 960
+  height: 540
+  hfov_deg: 70.0
+  mount_rpy_deg: [0.0, 0.0, 0.0]   # extra mount rotation in the body frame
+  stabilized: false                # true if a gimbal holds the camera at nadir
+  latency_s: 0.06                  # sensor-to-host delay, subtracted from frame timestamps
+
+detector:
+  type: yolo                       # yolo | color (color is used by the simulator)
+  weights: models/sdd_yolo11n.engine
+  imgsz: 960
+  conf: 0.35
+  class_map:                       # model class -> mission class
+    person: mannequin
+    mannequin: mannequin
+    tent: tent
+
+geolocation:
+  sigma_px: 2.0
+  sigma_att_deg: 1.5
+  sigma_alt_m: 1.0
+  sigma_pos_m: 1.5
+
+tracker:
+  gate_m: 12.0
+  min_hits: 5
+  max_sigma_m: 2.5
+  min_conf: 0.30
+
+payloads:
+  # Mass from the 2026 handbook; Cd and reference area are assumptions for a
+  # tumbling body and should be fitted from ground drop tests before flight.
+  water_bottle:
+    target: mannequin
+    mass_kg: 0.255
+    cd: 1.0
+    area_m2: 0.0075
+    servo_channel: 9
+  beacon:
+    target: tent
+    mass_kg: 0.155
+    cd: 1.1
+    area_m2: 0.0060
+    servo_channel: 10
+
+mission:
+  release_alt_m: 30.0
+  release_tol_m: 1.5
+  hover_speed_mps: 0.6
+  mission_time_s: 1800
+  time_margin_s: 120
+  min_laps_before_delivery: 1
+  wind_ne: [0.0, 0.0]              # updated from the autopilot's wind estimate in flight
+
+mavlink:
+  url: /dev/ttyTHS1                # udpin:0.0.0.0:14550 for SITL
+  baud: 921600
+  lap_last_seq: 12                 # mission item index of the last waypoint of the lap
+
+stream:
+  gcs_host: 192.168.1.10
+  gcs_port: 5600
+  bitrate_kbps: 2500
