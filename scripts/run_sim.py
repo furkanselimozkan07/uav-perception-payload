@@ -207,6 +207,7 @@ def run_episode(cfg: dict, seed: int, save_dir: pathlib.Path | None = None, verb
 
         save_dir.mkdir(parents=True, exist_ok=True)
         cv2.imwrite(str(save_dir / "risk_map_mosaic.jpg"), mosaic.render(), [cv2.IMWRITE_JPEG_QUALITY, 85])
+        mosaic.save(save_dir / "risk_map_geo.jpg")  # + .jgw world file and .json: opens georeferenced in QGIS
         # pose-only vs pose + phase-correlation refinement, cropped around the targets
         n_c = 0.5 * (truth["mannequin"].north + truth["tent"].north)
         e_c = 0.5 * (truth["mannequin"].east + truth["tent"].east)

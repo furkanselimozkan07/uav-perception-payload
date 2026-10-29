@@ -20,12 +20,14 @@ origin, which is also what makes the map useful to a first responder.
 """
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Optional
 
 import numpy as np
 
-from .geo import CameraModel, ne_offset, pixel_to_ned_offset
+from .geo import CameraModel, earth_radii, ne_offset, offset_geopoint, pixel_to_ned_offset
 from .types import FramePacket, GeoPoint
 
 
@@ -46,6 +48,41 @@ class MosaicGrid:
     def ne_to_px(self, n: float, e: float) -> tuple[float, float]:
         """Canvas pixel (x right = east, y down = south)."""
         return (e - self.east_min) / self.res_m, (self.north_max - n) / self.res_m
+
+    def px_to_ne(self, x: float, y: float) -> tuple[float, float]:
+        """Inverse of :meth:`ne_to_px`."""
+        return self.north_max - y * self.res_m, self.east_min + x * self.res_m
+
+    def px_to_geopoint(self, x: float, y: float) -> GeoPoint:
+        """WGS-84 position of canvas pixel (x, y)."""
+        n, e = self.px_to_ne(x, y)
+        return offset_geopoint(self.origin, n, e)
+
+    def world_file(self) -> str:
+        """ESRI world file (EPSG:4326, degrees) for the rendered image.
+
+        Uses the flat-earth degrees-per-metre at the origin latitude, so the
+        scale error across a SUAS-sized area is far below one pixel.
+        """
+        m, n = earth_radii(self.origin.lat)
+        deg_lat = np.degrees(self.res_m / m)
+        deg_lon = np.degrees(self.res_m / (n * np.cos(np.radians(self.origin.lat))))
+        ul = self.px_to_geopoint(0.5, 0.5)  # world files reference the centre of the upper-left pixel
+        return "\n".join(f"{v:.12f}" for v in (deg_lon, 0.0, 0.0, -deg_lat, ul.lon, ul.lat)) + "\n"
+
+    def metadata(self) -> dict:
+        h, w = self.shape
+        corners = {name: self.px_to_geopoint(x, y) for name, (x, y) in
+                   {"nw": (0, 0), "ne": (w, 0), "se": (w, h), "sw": (0, h)}.items()}
+        return {
+            "crs": "EPSG:4326",
+            "res_m_per_px": self.res_m,
+            "size_px": {"width": w, "height": h},
+            "origin": {"lat": self.origin.lat, "lon": self.origin.lon},
+            "extent_ne_m": {"north_min": self.north_min, "north_max": self.north_max,
+                            "east_min": self.east_min, "east_max": self.east_max},
+            "corners": {k: {"lat": p.lat, "lon": p.lon} for k, p in corners.items()},
+        }
 
 
 class GeoMosaic:
@@ -146,3 +183,30 @@ class GeoMosaic:
         m = self._wsum > 1e-3
         out[m] = self._acc[m] / self._wsum[m, None]
         return np.clip(out, 0, 255).astype(np.uint8)
+
+    def save(self, path: str | Path, background: int = 0, extra: Optional[dict] = None) -> list[Path]:
+        """Write the mosaic with its georeference.
+
+        Produces ``<path>`` (image; format from extension), a world file next to
+        it (``.pgw`` for PNG, ``.jgw`` for JPEG, ``.wld`` otherwise) and
+        ``<stem>.json`` with the grid, corner coordinates and frame statistics.
+        GIS tools (QGIS, ArcGIS) place the image on the map from the world file.
+        Returns the written paths.
+        """
+        import cv2
+
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not cv2.imwrite(str(path), self.render(background)):
+            raise OSError(f"could not write image {path}")
+        ext = {".png": ".pgw", ".jpg": ".jgw", ".jpeg": ".jgw", ".tif": ".tfw", ".tiff": ".tfw"}.get(path.suffix.lower(), ".wld")
+        wld = path.with_suffix(ext)
+        wld.write_text(self.grid.world_file())
+        meta = self.grid.metadata()
+        meta.update(frames=self.n_frames, coverage=round(self.coverage(), 4),
+                    median_correction_m=round(float(np.median(self.corrections_m)), 3) if self.corrections_m else None)
+        if extra:
+            meta.update(extra)
+        js = path.with_suffix(".json")
+        js.write_text(json.dumps(meta, indent=2))
+        return [path, wld, js]

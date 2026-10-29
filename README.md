@@ -49,7 +49,7 @@ flowchart LR
 | [`ballistics.py`](uavpp/ballistics.py) | RK4 point-mass fall with quadratic drag relative to the wind; release-point planning; hover and moving-release triggers with actuation-latency look-ahead |
 | [`mission.py`](uavpp/mission.py) | State machine that enforces the SUAS rules: **no delivery before a full waypoint lap**, each payload to its own target class, stop before the time limit |
 | [`autopilot.py`](uavpp/autopilot.py) | `MavlinkAutopilot` (ArduPilot: GUIDED position targets, `MAV_CMD_DO_SET_SERVO`, lap counting from `MISSION_ITEM_REACHED`) and a kinematic `SimAutopilot` with attitude noise and bias |
-| [`mapping.py`](uavpp/mapping.py) | Risk-mapping mosaic: each keyframe placed on a north-up ground grid by its pose, then **refined against the mosaic with phase correlation**, feather-blended |
+| [`mapping.py`](uavpp/mapping.py) | Risk-mapping mosaic: each keyframe placed on a north-up ground grid by its pose, then **refined against the mosaic with phase correlation**, feather-blended; `save()` exports the image with a **world file and JSON metadata** so it opens georeferenced in QGIS |
 | [`sim.py`](uavpp/sim.py) | Procedural search field with a mannequin and a tent among debris, rendered exactly through the camera model |
 
 ## Simulation results
@@ -145,7 +145,8 @@ python scripts/run_sim.py --runs 20       # Monte Carlo summary -> docs/sim_resu
 uavpp/        library (see the table above)
 scripts/      run_sim.py · run_onboard.py · export_tensorrt.py
 configs/      mission.yaml
-tests/        pytest suite (geometry, ballistics, tracking, video sync, mission rules, rendering)
+tests/        pytest suite (geometry, ballistics, tracking, video sync, mission rules, rendering, mosaic)
+ROADMAP.md    vision, backlog and changelog
 docs/         figures and Monte Carlo results produced by run_sim.py
 ```
 
