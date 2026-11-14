@@ -11,7 +11,7 @@ interfaces that the simulator can replace.
 ## Backlog
 
 - [x] Georeference the risk-map mosaic: world file + JSON metadata export, and unit tests for `mapping.py`
-- [ ] Unit tests for `detection.py` (ColorDetector class remapping, NMS/min-area, YOLO adapter with a stub model)
+- [x] Unit tests for `detection.py` (ColorDetector boxes/area filters/confidence, YOLO adapter with a stub model, drawing)
 - [ ] Unit tests for `autopilot.py` (SimAutopilot kinematics/noise, MAVLink lap counting with a fake connection)
 - [ ] Mission event log as JSONL + a `scripts/replay_log.py` that re-plots a flight from logs
 - [ ] Coverage report for the lawnmower search: fraction of the search area seen vs. time
@@ -29,6 +29,9 @@ interfaces that the simulator can replace.
 
 ## Changelog
 
+- 2026-11-14 — Tests for `detection.py`: ColorDetector (boxes, area filters, speckle removal, fill-ratio confidence),
+  YoloDetector against a stubbed `ultralytics` (class remap, unmapped/tiny drops, parameters, missing-dependency error),
+  `draw_detections`.
 - 2026-10-29 — Mosaic export: `GeoMosaic.save()` writes the image with an ESRI world file (EPSG:4326) and
   JSON metadata, so the risk map opens georeferenced in QGIS; first test suite for `mapping.py`
   (grid maths, placement, blending, spacing, phase-correlation recovery).
